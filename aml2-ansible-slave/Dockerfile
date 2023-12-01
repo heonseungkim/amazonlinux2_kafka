@@ -14,12 +14,8 @@ RUN yum install -y shadow-utils sudo git && \
 adduser ec2-user && \
 usermod -aG root ec2-user && \
 echo "ec2-user ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-# USER ec2-user
-# WORKDIR /home/ec2-user
 
 # setup ssh
 RUN mkdir -p /home/ec2-user/.ssh && \
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGOZOa2Ek/nCSrZbKHWBOcbR5oCZxPTh80Og4O4l6cA0lDLQIHWWhTiTNlXN6qX9sAcEzA2xsbFFaqXUPp/z7CxjFb9E1q9iNGM1YprF6ap33yCmIYl7cxzxMgOPOw6SS0OyhsC6lA/stnJ89YNHix5LBV+waOCO6x97zfvGumnVd+hxe8Ni/Jl1COKL9eW+cW8lpHWrvY6ysJPteY1TlVuavgaNkePH35NokKh01mZaN/gry2Q9cDObGJb5cqjeTNl94alZ4GbzwpvgwZCfbQxzjjN/z2MTs6L6gz+5kPU8B96MDZtIuP+j7ykg+m1gaIX8UaPnvUVMGjpukzsK+b ec2-user@peter-ansible01.foo.bar" >> /home/ec2-user/.ssh/authorized_keys && \
 chown -R ec2-user:ec2-user /home/ec2-user
-
-# ENTRYPOINT ["/bin/bash", "-c", "sudo /sbin/sshd && tail -f /dev/null"] 

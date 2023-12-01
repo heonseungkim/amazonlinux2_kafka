@@ -11,11 +11,8 @@ adduser ec2-user && \
 usermod -aG root ec2-user && \
 echo "ec2-user ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
 mkdir -p /home/ec2-user
-# USER ec2-user
-# WORKDIR /home/ec2-user
 
 # install ansible
-# RUN sudo amazon-linux-extras install -y ansible2
 RUN amazon-linux-extras install -y ansible2
 
 # clone sources
@@ -54,5 +51,3 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGOZOa2Ek/nCSrZbKHWBOcbR5oCZxPTh80Og
 chmod 400 /home/ec2-user/.ssh/id_rsa && \
 chmod 400 /home/ec2-user/.ssh/id_rsa.pub && \
 chown -R ec2-user:ec2-user /home/ec2-user
-
-# ENTRYPOINT ["/bin/bash", "-c", "tail -f /dev/null"]
