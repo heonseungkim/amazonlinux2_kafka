@@ -109,6 +109,7 @@ docker run \
 --add-host "$DOMAIN_ZOOKEEPER_2       $NAME_ZOOKEEPER_2":$IP_ZOOKEEPER_2 \
 --add-host "$DOMAIN_ZOOKEEPER_3       $NAME_ZOOKEEPER_3":$IP_ZOOKEEPER_3 \
 --name $DOMAIN_ZOOKEEPER_1 \
+-p 2181:2181 \
 -h $DOMAIN_ZOOKEEPER_1 \
 $SLAVE_NAME:$OS_TAG /sbin/init && \
 
@@ -123,6 +124,7 @@ docker run \
 --add-host "$DOMAIN_ZOOKEEPER_2       $NAME_ZOOKEEPER_2":$IP_ZOOKEEPER_2 \
 --add-host "$DOMAIN_ZOOKEEPER_3       $NAME_ZOOKEEPER_3":$IP_ZOOKEEPER_3 \
 --name $DOMAIN_ZOOKEEPER_2 \
+-p 2182:2181 \
 -h $DOMAIN_ZOOKEEPER_2 \
 $SLAVE_NAME:$OS_TAG /sbin/init
 
@@ -137,5 +139,6 @@ docker run \
 --add-host "$DOMAIN_ZOOKEEPER_2       $NAME_ZOOKEEPER_2":$IP_ZOOKEEPER_2 \
 --add-host "$DOMAIN_ZOOKEEPER_3       $NAME_ZOOKEEPER_3":$IP_ZOOKEEPER_3 \
 --name $DOMAIN_ZOOKEEPER_3 \
+-p 2183:2181 \
 -h $DOMAIN_ZOOKEEPER_3 \
 $SLAVE_NAME:$OS_TAG /sbin/init
