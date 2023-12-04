@@ -64,6 +64,7 @@ docker run \
 --add-host "$DOMAIN_ZOOKEEPER_2       $NAME_ZOOKEEPER_2":$IP_ZOOKEEPER_2 \
 --add-host "$DOMAIN_ZOOKEEPER_3       $NAME_ZOOKEEPER_3":$IP_ZOOKEEPER_3 \
 --name $DOMAIN_KAFKA_1 \
+-p 9092:9092 \
 -h $DOMAIN_KAFKA_1 \
 $SLAVE_NAME:$OS_TAG /sbin/init  && \
 
@@ -78,6 +79,7 @@ docker run \
 --add-host "$DOMAIN_ZOOKEEPER_2       $NAME_ZOOKEEPER_2":$IP_ZOOKEEPER_2 \
 --add-host "$DOMAIN_ZOOKEEPER_3       $NAME_ZOOKEEPER_3":$IP_ZOOKEEPER_3 \
 --name $DOMAIN_KAFKA_2 \
+-p 9093:9092 \
 -h $DOMAIN_KAFKA_2 \
 $SLAVE_NAME:$OS_TAG /sbin/init && \
 
@@ -92,6 +94,7 @@ docker run \
 --add-host "$DOMAIN_ZOOKEEPER_2       $NAME_ZOOKEEPER_2":$IP_ZOOKEEPER_2 \
 --add-host "$DOMAIN_ZOOKEEPER_3       $NAME_ZOOKEEPER_3":$IP_ZOOKEEPER_3 \
 --name $DOMAIN_KAFKA_3 \
+-p 9094:9092 \
 -h $DOMAIN_KAFKA_3 \
 $SLAVE_NAME:$OS_TAG /sbin/init && \
 

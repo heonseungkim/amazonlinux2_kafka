@@ -1,0 +1,136 @@
+version: '3.9'
+
+services:
+  peter-kafka01.foo.bar:
+    image: heonseungkim/peter-kafka01.foo.bar:v1
+    container_name: peter-kafka01.foo.bar
+    hostname: peter-kafka01.foo.bar
+    extra_hosts:
+      - "peter-ansible01.foo.bar    peter-ansible01:172.19.0.2"
+      - "peter-kafka01.foo.bar      peter-kafka01:172.19.0.3"
+      - "peter-kafka02.foo.bar      peter-kafka02:172.19.0.4"
+      - "peter-kafka03.foo.bar      peter-kafka03:172.19.0.5"
+      - "peter-zk01.foo.bar         peter-zk01:172.19.0.6"
+      - "peter-zk02.foo.bar         peter-zk02:172.19.0.7"
+      - "peter-zk03.foo.bar         peter-zk03:172.19.0.8"
+    privileged: true
+    command: /sbin/init  
+    ports:
+      - "9092:9092"
+    networks:
+      peter-kafka-cluster:
+        ipv4_address: 172.19.0.3
+  peter-kafka02.foo.bar:
+    image: heonseungkim/peter-kafka02.foo.bar:v1
+    container_name: peter-kafka02.foo.bar
+    hostname: peter-kafka02.foo.bar
+    extra_hosts:
+      - "peter-ansible01.foo.bar    peter-ansible01:172.19.0.2"
+      - "peter-kafka01.foo.bar      peter-kafka01:172.19.0.3"
+      - "peter-kafka02.foo.bar      peter-kafka02:172.19.0.4"
+      - "peter-kafka03.foo.bar      peter-kafka03:172.19.0.5"
+      - "peter-zk01.foo.bar         peter-zk01:172.19.0.6"
+      - "peter-zk02.foo.bar         peter-zk02:172.19.0.7"
+      - "peter-zk03.foo.bar         peter-zk03:172.19.0.8"
+    privileged: true
+    command: /sbin/init  
+    ports:
+      - "9093:9092"
+    networks:
+      peter-kafka-cluster:
+        ipv4_address: 172.19.0.4
+  peter-kafka03.foo.bar:
+    image: heonseungkim/peter-kafka03.foo.bar:v1
+    container_name: peter-kafka03.foo.bar
+    hostname: peter-kafka03.foo.bar
+    extra_hosts:
+      - "peter-ansible01.foo.bar    peter-ansible01:172.19.0.2"
+      - "peter-kafka01.foo.bar      peter-kafka01:172.19.0.3"
+      - "peter-kafka02.foo.bar      peter-kafka02:172.19.0.4"
+      - "peter-kafka03.foo.bar      peter-kafka03:172.19.0.5"
+      - "peter-zk01.foo.bar         peter-zk01:172.19.0.6"
+      - "peter-zk02.foo.bar         peter-zk02:172.19.0.7"
+      - "peter-zk03.foo.bar         peter-zk03:172.19.0.8"
+    privileged: true
+    command: /sbin/init  
+    ports:
+      - "9094:9092"
+    networks:
+      peter-kafka-cluster:
+        ipv4_address: 172.19.0.5
+  peter-zk01.foo.bar:
+    image: heonseungkim/peter-zk01.foo.bar:v1
+    container_name: peter-zk01.foo.bar
+    hostname: peter-zk01.foo.bar
+    extra_hosts:
+      - "peter-ansible01.foo.bar    peter-ansible01:172.19.0.2"
+      - "peter-kafka01.foo.bar      peter-kafka01:172.19.0.3"
+      - "peter-kafka02.foo.bar      peter-kafka02:172.19.0.4"
+      - "peter-kafka03.foo.bar      peter-kafka03:172.19.0.5"
+      - "peter-zk01.foo.bar         peter-zk01:172.19.0.6"
+      - "peter-zk02.foo.bar         peter-zk02:172.19.0.7"
+      - "peter-zk03.foo.bar         peter-zk03:172.19.0.8"
+    privileged: true
+    command: /sbin/init  
+    networks:
+      peter-kafka-cluster:
+        ipv4_address: 172.19.0.6
+  peter-zk02.foo.bar:
+    image: heonseungkim/peter-zk02.foo.bar:v1
+    container_name: peter-zk02.foo.bar
+    hostname: peter-zk02.foo.bar
+    extra_hosts:
+      - "peter-ansible01.foo.bar    peter-ansible01:172.19.0.2"
+      - "peter-kafka01.foo.bar      peter-kafka01:172.19.0.3"
+      - "peter-kafka02.foo.bar      peter-kafka02:172.19.0.4"
+      - "peter-kafka03.foo.bar      peter-kafka03:172.19.0.5"
+      - "peter-zk01.foo.bar         peter-zk01:172.19.0.6"
+      - "peter-zk02.foo.bar         peter-zk02:172.19.0.7"
+      - "peter-zk03.foo.bar         peter-zk03:172.19.0.8"
+    privileged: true
+    command: /sbin/init  
+    networks:
+      peter-kafka-cluster:
+        ipv4_address: 172.19.0.7
+  peter-zk03.foo.bar:
+    image: heonseungkim/peter-zk03.foo.bar:v1
+    container_name: peter-zk03.foo.bar
+    hostname: peter-zk03.foo.bar
+    extra_hosts:
+      - "peter-ansible01.foo.bar    peter-ansible01:172.19.0.2"
+      - "peter-kafka01.foo.bar      peter-kafka01:172.19.0.3"
+      - "peter-kafka02.foo.bar      peter-kafka02:172.19.0.4"
+      - "peter-kafka03.foo.bar      peter-kafka03:172.19.0.5"
+      - "peter-zk01.foo.bar         peter-zk01:172.19.0.6"
+      - "peter-zk02.foo.bar         peter-zk02:172.19.0.7"
+      - "peter-zk03.foo.bar         peter-zk03:172.19.0.8"
+    privileged: true
+    command: /sbin/init  
+    networks:
+      peter-kafka-cluster:
+        ipv4_address: 172.19.0.8        
+  peter-ansible01.foo.bar:
+    image: heonseungkim/peter-ansible01.foo.bar:v1
+    container_name: peter-ansible01.foo.bar
+    hostname: peter-ansible01.foo.bar
+    extra_hosts:
+      - "peter-ansible01.foo.bar    peter-ansible01:172.19.0.2"
+      - "peter-kafka01.foo.bar      peter-kafka01:172.19.0.3"
+      - "peter-kafka02.foo.bar      peter-kafka02:172.19.0.4"
+      - "peter-kafka03.foo.bar      peter-kafka03:172.19.0.5"
+      - "peter-zk01.foo.bar         peter-zk01:172.19.0.6"
+      - "peter-zk02.foo.bar         peter-zk02:172.19.0.7"
+      - "peter-zk03.foo.bar         peter-zk03:172.19.0.8"
+    privileged: true
+    command: /sbin/init  
+    networks:
+      peter-kafka-cluster:
+        ipv4_address: 172.19.0.2
+
+networks:
+  peter-kafka-cluster:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.19.0.0/16
+          gateway: 172.19.0.1        
