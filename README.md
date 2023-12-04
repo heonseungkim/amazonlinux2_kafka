@@ -42,6 +42,15 @@ $ docker exec -it --user ec2-user peter-ansible01.foo.bar /bin/bash
 $ docker exec -it --user ec2-user peter-kafka01.foo.bar /bin/bash
 
 # 등...
+
+# 컨테이너를 모두 종료하고자 하면
+$ docker-compose stop
+
+# 컨테니어를 모두 시작하고자 하면
+$ docker-compose start
+
+# 현재 모든 컨테이너와 데이터를 지우려면 (실습한 데이터가 모두 날라가고 2챕터 초기 상황으로 돌아감)
+$ docker-compose down
 ```
 
 ### 이후 실습 내용을 진행하면 됩니다.
