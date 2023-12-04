@@ -2,7 +2,15 @@
 ### 실습 환경 Amazon Linux 2 환경을 Docker 컨테이너로 구현
 
 
-### 방법 1. image 이용한 docker-compose [추천]
+### 방법 1. image 이용한 docker-compose
+image: 
+* heonseungkim/peter-ansible01.foo.bar:v1 
+* heonseungkim/peter-kafka01.foo.bar:v1 
+* heonseungkim/peter-kafka02.foo.bar:v1 
+* heonseungkim/peter-kafka03.foo.bar:v1 
+* heonseungkim/peter-zk01.foo.bar:v1 
+* heonseungkim/peter-zk02.foo.bar:v1 
+* heonseungkim/peter-zk03.foo.bar:v1 
 ```
 $ git clone https://github.com/heonseungkim/amazonlinux2_kafka ./amazonlinux2_kafka
 $ cd amazonlinux2_kafka
