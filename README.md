@@ -34,6 +34,14 @@ b5980ea2ff5f   heonseungkim/peter-zk02.foo.bar:v1        "/sbin/init"   13 minut
 45099f26ed47   heonseungkim/peter-kafka01.foo.bar:v1     "/sbin/init"   13 minutes ago   Up 13 minutes   0.0.0.0:9092->9092/tcp   peter-kafka01.foo.bar
 27f94d754134   heonseungkim/peter-zk01.foo.bar:v1        "/sbin/init"   13 minutes ago   Up 13 minutes   0.0.0.0:2181->2181/tcp   peter-zk01.foo.bar
 b1ae5abe8258   heonseungkim/peter-zk03.foo.bar:v1        "/sbin/init"   13 minutes ago   Up 13 minutes   0.0.0.0:2183->2181/tcp   peter-zk03.foo.bar
+
+# ansible 컨테이너 접속
+$ docker exec -it --user ec2-user peter-ansible01.foo.bar /bin/bash
+
+# kafka01 컨테이너 접속
+$ docker exec -it --user ec2-user peter-kafka01.foo.bar /bin/bash
+
+# 등...
 ```
 
 ### 이후 실습 내용을 진행하면 됩니다.
