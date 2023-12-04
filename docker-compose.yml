@@ -72,6 +72,8 @@ services:
       - "peter-zk03.foo.bar         peter-zk03:172.19.0.8"
     privileged: true
     command: /sbin/init  
+    ports:
+      - "2181:2181"
     networks:
       peter-kafka-cluster:
         ipv4_address: 172.19.0.6
@@ -89,6 +91,8 @@ services:
       - "peter-zk03.foo.bar         peter-zk03:172.19.0.8"
     privileged: true
     command: /sbin/init  
+    ports:
+      - "2182:2181"
     networks:
       peter-kafka-cluster:
         ipv4_address: 172.19.0.7
@@ -106,6 +110,8 @@ services:
       - "peter-zk03.foo.bar         peter-zk03:172.19.0.8"
     privileged: true
     command: /sbin/init  
+    ports:
+      - "2183:2181"
     networks:
       peter-kafka-cluster:
         ipv4_address: 172.19.0.8        
