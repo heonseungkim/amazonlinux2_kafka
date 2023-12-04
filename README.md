@@ -18,14 +18,14 @@ $ docker-compose up -d
  ✔ Container peter-kafka01.foo.bar                 Started      1.3s 
 
 $ docker ps
-CONTAINER ID   IMAGE                         COMMAND        CREATED          STATUS          PORTS     NAMES
-802090e74063   ansible-slave:amazonlinux2    "/sbin/init"   17 minutes ago   Up 17 minutes             peter-zk03.foo.bar
-e4f40b888c16   ansible-slave:amazonlinux2    "/sbin/init"   17 minutes ago   Up 17 minutes             peter-zk02.foo.bar
-3caf1d0e42fd   ansible-slave:amazonlinux2    "/sbin/init"   17 minutes ago   Up 17 minutes             peter-zk01.foo.bar
-2e422984b8a3   ansible-slave:amazonlinux2    "/sbin/init"   17 minutes ago   Up 17 minutes             peter-kafka03.foo.bar
-35b3fe9475f6   ansible-slave:amazonlinux2    "/sbin/init"   17 minutes ago   Up 17 minutes             peter-kafka02.foo.bar
-c832d250109f   ansible-slave:amazonlinux2    "/sbin/init"   17 minutes ago   Up 17 minutes             peter-kafka01.foo.bar
-fceddb85f21c   ansible-master:amazonlinux2   "/sbin/init"   17 minutes ago   Up 17 minutes             peter-ansible01.foo.bar
+CONTAINER ID   IMAGE                                     COMMAND        CREATED         STATUS         PORTS                    NAMES
+65564711d536   heonseungkim/peter-zk01.foo.bar:v1        "/sbin/init"   7 minutes ago   Up 5 minutes                            peter-zk01.foo.bar
+7c274f562109   heonseungkim/peter-kafka03.foo.bar:v1     "/sbin/init"   7 minutes ago   Up 5 minutes   0.0.0.0:9094->9092/tcp   peter-kafka03.foo.bar
+0cd9f7ba26da   heonseungkim/peter-kafka02.foo.bar:v1     "/sbin/init"   7 minutes ago   Up 5 minutes   0.0.0.0:9093->9092/tcp   peter-kafka02.foo.bar
+b7f4c22047e3   heonseungkim/peter-kafka01.foo.bar:v1     "/sbin/init"   7 minutes ago   Up 5 minutes   0.0.0.0:9092->9092/tcp   peter-kafka01.foo.bar
+5b3be3e93ff0   heonseungkim/peter-ansible01.foo.bar:v1   "/sbin/init"   7 minutes ago   Up 5 minutes                            peter-ansible01.foo.bar
+92bfe150719a   heonseungkim/peter-zk02.foo.bar:v1        "/sbin/init"   7 minutes ago   Up 5 minutes                            peter-zk02.foo.bar
+6c2e53427a18   heonseungkim/peter-zk03.foo.bar:v1        "/sbin/init"   7 minutes ago   Up 5 minutes                            peter-zk03.foo.bar
 ```
 
 ### 방법 2. 직접 build
