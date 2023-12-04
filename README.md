@@ -14,6 +14,8 @@ image:
 ```
 $ git clone https://github.com/heonseungkim/amazonlinux2_kafka ./amazonlinux2_kafka
 $ cd amazonlinux2_kafka
+
+# chapter 2 실습을 바로 시작할 수 있는 상태의 컨테이너 초기 셋업
 $ docker-compose up -d
 [+] 
  ✔ Network amazonlinux2_kafka_peter-kafka-cluster  Created      0.0s 
