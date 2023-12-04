@@ -18,14 +18,14 @@ $ docker-compose up -d
  ✔ Container peter-kafka01.foo.bar                 Started      1.3s 
 
 $ docker ps
-CONTAINER ID   IMAGE                                     COMMAND        CREATED         STATUS         PORTS                    NAMES
-65564711d536   heonseungkim/peter-zk01.foo.bar:v1        "/sbin/init"   7 minutes ago   Up 5 minutes                            peter-zk01.foo.bar
-7c274f562109   heonseungkim/peter-kafka03.foo.bar:v1     "/sbin/init"   7 minutes ago   Up 5 minutes   0.0.0.0:9094->9092/tcp   peter-kafka03.foo.bar
-0cd9f7ba26da   heonseungkim/peter-kafka02.foo.bar:v1     "/sbin/init"   7 minutes ago   Up 5 minutes   0.0.0.0:9093->9092/tcp   peter-kafka02.foo.bar
-b7f4c22047e3   heonseungkim/peter-kafka01.foo.bar:v1     "/sbin/init"   7 minutes ago   Up 5 minutes   0.0.0.0:9092->9092/tcp   peter-kafka01.foo.bar
-5b3be3e93ff0   heonseungkim/peter-ansible01.foo.bar:v1   "/sbin/init"   7 minutes ago   Up 5 minutes                            peter-ansible01.foo.bar
-92bfe150719a   heonseungkim/peter-zk02.foo.bar:v1        "/sbin/init"   7 minutes ago   Up 5 minutes                            peter-zk02.foo.bar
-6c2e53427a18   heonseungkim/peter-zk03.foo.bar:v1        "/sbin/init"   7 minutes ago   Up 5 minutes                            peter-zk03.foo.bar
+CONTAINER ID   IMAGE                                     COMMAND        CREATED          STATUS          PORTS                    NAMES
+e287a8619840   heonseungkim/peter-kafka03.foo.bar:v1     "/sbin/init"   13 minutes ago   Up 13 minutes   0.0.0.0:9094->9092/tcp   peter-kafka03.foo.bar
+f3bc1a520135   heonseungkim/peter-kafka02.foo.bar:v1     "/sbin/init"   13 minutes ago   Up 13 minutes   0.0.0.0:9093->9092/tcp   peter-kafka02.foo.bar
+b5980ea2ff5f   heonseungkim/peter-zk02.foo.bar:v1        "/sbin/init"   13 minutes ago   Up 13 minutes   0.0.0.0:2182->2181/tcp   peter-zk02.foo.bar
+7751c78d3625   heonseungkim/peter-ansible01.foo.bar:v1   "/sbin/init"   13 minutes ago   Up 13 minutes                            peter-ansible01.foo.bar
+45099f26ed47   heonseungkim/peter-kafka01.foo.bar:v1     "/sbin/init"   13 minutes ago   Up 13 minutes   0.0.0.0:9092->9092/tcp   peter-kafka01.foo.bar
+27f94d754134   heonseungkim/peter-zk01.foo.bar:v1        "/sbin/init"   13 minutes ago   Up 13 minutes   0.0.0.0:2181->2181/tcp   peter-zk01.foo.bar
+b1ae5abe8258   heonseungkim/peter-zk03.foo.bar:v1        "/sbin/init"   13 minutes ago   Up 13 minutes   0.0.0.0:2183->2181/tcp   peter-zk03.foo.bar
 ```
 
 ### 방법 2. 직접 build
