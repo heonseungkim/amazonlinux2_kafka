@@ -1,6 +1,16 @@
 # 실전 카프카 개발부터 운영까지
 ### 실습 환경 Amazon Linux 2 환경을 Docker 컨테이너로 구현
 
+### /sbin/init 사용을 위한 세팅 값 변경
+```
+vi ~/Library/Group\ Containers/group.com.docker/settings.json
+{
+  ...
+  "deprecatedCgroupv1": true # true로 수정
+  ...
+}
+```
+
 
 ### 방법 1. 직접 build
 ```
