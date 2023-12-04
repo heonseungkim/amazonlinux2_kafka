@@ -39,6 +39,10 @@ b1ae5abe8258   heonseungkim/peter-zk03.foo.bar:v1        "/sbin/init"   13 minut
 
 # ansible 컨테이너 접속
 $ docker exec -it --user ec2-user peter-ansible01.foo.bar /bin/bash
+# 이 후 앤서블로 주키퍼와 카프카 설치 실습부터 진행하면 됨
+
+
+
 
 # kafka01 컨테이너 접속
 $ docker exec -it --user ec2-user peter-kafka01.foo.bar /bin/bash
