@@ -72,12 +72,9 @@ $ docker exec -it --user ec2-user peter-kafka01.foo.bar /usr/local/kafka/bin/kaf
 
 # ansible 컨테이너 접속
 $ docker exec -it --user ec2-user peter-ansible01.foo.bar /bin/bash
-# 이 후 앤서블로 주키퍼와 카프카 설치 실습부터 진행하면 됨
 
 # kafka01 컨테이너 접속
 $ docker exec -it --user ec2-user peter-kafka01.foo.bar /bin/bash
-
-# 등...
 
 # 컨테이너를 모두 종료하고자 하면
 $ docker-compose stop
